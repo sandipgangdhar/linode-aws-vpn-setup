@@ -1,0 +1,21 @@
+[Unit]
+Description=VPN Tunnel Failover Service
+After=network-online.target ipsec.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/usr/local/bin
+ExecStart=/bin/bash /usr/local/bin/vpn-failover.sh
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Restart=always
+RestartSec=10
+LimitNOFILE=65536
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=vpn-failover
+
+[Install]
+WantedBy=multi-user.target

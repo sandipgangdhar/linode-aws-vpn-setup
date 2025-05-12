@@ -1,4 +1,4 @@
-""# VPN Failover and IPsec Tunnel Automation
+## VPN Failover and IPsec Tunnel Automation
 
 This repository contains the configuration and scripts required to automate VPN failover and IPsec tunnel management between AWS and Linode using StrongSwan. It includes:
 - Automated IPsec tunnel bring-up and teardown
@@ -141,7 +141,6 @@ Runs as a systemd service to:
 Contributions are welcome. Please submit a PR with detailed information and testing notes.
 
 ---
-""
 
 
 ## Documentation
